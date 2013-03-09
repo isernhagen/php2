@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "on");
 //esse arquivo será o src de uma tag img
 
 require "ThumbnailImage.php";

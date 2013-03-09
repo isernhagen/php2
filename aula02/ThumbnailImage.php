@@ -89,13 +89,13 @@ class ThumbnailImage {
         switch($this->imageproperties[2])
         {
             case IMAGETYPE_JPEG:
-                imagejpeg($this->image, "", $this->quality);
+                imagejpeg($this->image, NULL, $this->quality);
                 break;
             case IMAGETYPE_GIF:
                 imagegif($this->image);
                 break;
             case IMAGETYPE_PNG:
-                imagepng($this->image, "", $this->quality/100);
+                imagepng($this->image, NULL, $this->quality/100);
                 break;
             default:
                 die ("Não foi possivel criar a imagem.");

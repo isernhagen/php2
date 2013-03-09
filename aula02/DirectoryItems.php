@@ -8,7 +8,7 @@ class DirectoryItems {
 
     private $fileArray = array();
     
-        public function __construct($directory, $replacechar = "_")
+        public function __construct($directory, $replaceChar = "_")
 
        {
             $this->directory = $directory;

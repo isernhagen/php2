@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "on");
     require "DirectoryItems.php";
 
     $dc = new DirectoryItems('fotos');
