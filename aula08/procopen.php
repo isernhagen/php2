@@ -1,7 +1,7 @@
 <?php
 
 $fin = fopen("readfrom", "r");
-$fout = fopen("writeto", "r");
+$fout = fopen("/tmp/writeto", "w");
 
 $desc = array (0=>$fin, 1=>$fout);
 
