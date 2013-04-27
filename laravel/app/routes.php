@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/user/{id?}', function($id = null)
+/**Route::get('/user/{id?}', function($id = null)
 {
 	if($id)
 	{
@@ -34,4 +34,39 @@ Route::get('/user/{id?}', function($id = null)
 		return View::make('user.list');
 	}
 	
+});**/
+
+Route::get('/users', function()
+{
+	//lista todos os usuários
+	$users = User::all();
+
+	return View::make('user.list')
+		->with('users', $users);
+
 });
+
+Route::get('/users/create', function()
+{
+	//criam um novo usuário
+	return 'Criando novo usuário';
+});
+
+Route::get('/users/read/{id}', function($id)
+{
+	//lista usuários de id = $id
+	return "Listando usuário $id";
+});
+
+Route::get('/users/update/{id}', function($id)
+{
+	//lista usuários de id = $id
+	return "Atualizando usuário $id";
+});
+
+Route::get('/users/delete/{id}', function($id)
+{
+	//atualiza usuários de id = $id
+	return "Excluindo usuário $id";
+});
+
